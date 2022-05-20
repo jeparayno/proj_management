@@ -1,18 +1,18 @@
 import React from 'react';
 import './App.css';
-// import axios from 'axios';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Main from './views/Main';
-// import PersonForm from '../components/PersonForm';
-// import PersonList from '../components/PersonList';
+import ProductDetails from './views/ProductDetails';
+
 const App = () => {
     
     return(
 	<div className='App'>
     	<BrowserRouter>
-            <Routes>
-	    <Route element={<Main/>} path="/home" default />
-            </Routes>
+        <Routes>
+          <Route element={<Main/>} path="/home" default />
+          <Route element={<ProductDetails/>} path="/details/:id" />
+        </Routes>      
     	</BrowserRouter>
         </div>
     ) 
