@@ -29,3 +29,9 @@ module.exports.updateOneProduct = (req, res) => {
         .then( updateProduct => res.json(updateProduct))
         .catch(err => console.log(err));
 }
+
+module.exports.deleteOneProduct = (req, res) => {
+    Product.findOneAndDelete({ _id: req.params.id})
+        .then( deleteProduct => res.json(deleteProduct))
+        .catch(err => console.log(err));
+}
