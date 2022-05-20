@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 // import axios from 'axios';
-import Form from '../components/Forms';
+import ProductForms from '../components/ProductForms';
 import ProductList from '../components/ProductList';
 const Main = (props) => {
     
@@ -8,8 +8,9 @@ const Main = (props) => {
     
     return (
         <div>
-            <Form product={product} setProduct={setProduct} />
+            <ProductForms product={product} setProduct={setProduct} />
             <hr/>
+            <p>ALL PRODUCTS</p>
             <ProductList product={product} setProduct={setProduct} />
         </div>
     )

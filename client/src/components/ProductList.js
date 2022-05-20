@@ -16,12 +16,15 @@ const ProductList = (props) => {
                 product.map((product, index) => {
                     return (
                         <div key={index}>
+                            {/* Commented below to show only the Title Page of the Specific Product */}
                             {/* <p>{product.title}</p>
                             <p>{product.price}</p>
                             <p>{product.description}</p> */}
                             <Link to={`/details/${product._id}`}>
                                 {product.title}'s Page'
                             </Link>
+                            <br />
+                            <Link to={`/details/update/${product._id}`}>Edit</Link>
                         </div>
                     )
                 })

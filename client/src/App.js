@@ -3,6 +3,7 @@ import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Main from './views/Main';
 import ProductDetails from './views/ProductDetails';
+import ProductUpdate from './components/ProductUpdate';
 
 const App = () => {
     
@@ -12,6 +13,7 @@ const App = () => {
         <Routes>
           <Route element={<Main/>} path="/home" default />
           <Route element={<ProductDetails/>} path="/details/:id" />
+          <Route element={<ProductUpdate />} path="/details/update/:id" />
         </Routes>      
     	</BrowserRouter>
         </div>
