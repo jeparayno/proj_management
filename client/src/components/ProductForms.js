@@ -30,22 +30,22 @@ const ProductForms = (props) => {
     }
     
     return (
-        <form onSubmit={onSubmitHandler}>
+        <form onSubmit={onSubmitHandler} className="prodForm">
             <div className='form-group mb-4 align-item-center'>
-                <label for="productTitle"> Product Title </label>
-                <input type="text" class="form-control mx-sm-3" onChange = {(e) => setTitle(e.target.value)} />
+                <label for="productTitle" className='prodTxt'> Product Name </label>
+                <input type="text" class="form-control mx-sm-3" onChange = {(e) => setTitle(e.target.value)} placeholder="Name" />
             </div>
             <div className='form-group mb-4 align-item-center'>
-                <label for="productPrice"> Product Price </label>
-                <input type="number" class="form-control mx-sm-3" onChange = {(e)=>setPrice(e.target.value)} />
+                <label for="productPrice" className='prodTxt'> Product Price </label>
+                <input type="number" class="form-control mx-sm-3" onChange = {(e)=>setPrice(e.target.value)} placeholder="Price" />
             </div>
             <div className='form-group mb-4 align-item-center'>
-                <label for="productDescription"> Product Description </label>
-                <input type="text" class="form-control mx-sm-3" onChange = {(e)=>setDescription(e.target.value)} />
+                <label for="productDescription" className='prodTxt'> Product Description </label>
+                <input type="text" class="form-control mx-sm-3" onChange = {(e)=>setDescription(e.target.value)} placeholder="Description" />
             </div>
             <button type="submit" class="btn btn-success">Submit</button>
             &nbsp;
-            <Link to={`/home`}><button type="button" class="btn btn-info">Home</button></Link>
+            <Link to={`/home`}><button type="button" class="btn btn-info">Cancel</button></Link>
         </form>
     )
 }

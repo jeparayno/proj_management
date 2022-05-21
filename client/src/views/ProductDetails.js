@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import {useParams, useNavigate} from "react-router-dom";
 import { Link } from 'react-router-dom';
+
 const ProductDetails = (props) => {
     const [product, setProduct] = useState({});
     const {id} = useParams(); 
@@ -23,13 +24,14 @@ const ProductDetails = (props) => {
     }
 
     return (
-        <div>
-            <p>Title: {product.title}</p>
-            <p>Price: {product.price}</p>
-            <p>Description: {product.description}</p>
-            <Link to={`/home`}>Back</Link>
-            <br />
-            <button onClick={deleteProduct}>Delete</button>
+        <div className='prodDet'>
+            <h1> Product Details </h1>
+            <h3>Name: {product.title}</h3>
+            <h3>Price: {product.price}</h3>
+            <h3>Description: {product.description}</h3>
+            <Link to={`/home`}><button type="button" class="btn btn-info">Back</button></Link>
+            &nbsp;
+            <button type="button" class="btn btn-danger" onClick={deleteProduct}>Delete</button>
         </div>
     )
 }

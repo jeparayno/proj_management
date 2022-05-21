@@ -1,5 +1,22 @@
+/* This is for the Create Product */
+
 form {
     margin: 0 auto;
     width: 900px;
     justify-content: center;
+}
+
+.prodTxt {
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.prodForm {
+    margin-top: 5%;
+}
+
+/* This is for the Product Detail */
+
+.prodDet {
+    margin-top: 5%;
 }
