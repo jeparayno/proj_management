@@ -1,6 +1,6 @@
 import React, { useEffect} from 'react';
 import axios from 'axios';
-import {Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const ProductList = (props) => {
     const { product, setProduct} = props;
     
@@ -25,17 +25,26 @@ const ProductList = (props) => {
                 product.map((product, index) => {
                     return (
                         <div key={index}>
-                            {/* Commented below to show only the Title Page of the Specific Product */}
-                            {/* <p>{product.title}</p>
-                            <p>{product.price}</p>
-                            <p>{product.description}</p> */}
-                            <Link to={`/details/${product._id}`}>
-                                {product.title}'s Page'
-                            </Link>
-                            <br />
-                            <Link to={`/details/update/${product._id}`}>Edit</Link>
-                            {/* <br />
-                            <button onClick={() => deleteProduct(product._id)}>Delete</button> */}
+                            <table className='table' >
+                                <thead>
+                                    <tr>
+                                        <th scope='col'>Product</th>
+                                        <th scope='col'>Price</th>
+                                        <th scope='col'>Description</th>
+                                        <th scope='col'>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{product.title}</td>
+                                        <td>{product.price}</td>
+                                        <td>{product.description}</td>
+                                        <td>
+                                            <Link to={`/details/${product._id}`}><button type="button" class="btn btn-info">Details</button></Link> &nbsp;     
+                                            <Link to={`/details/update/${product._id}`}><button type="button" class="btn btn-warning">Edit</button></Link></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     )
                 })
@@ -44,3 +53,4 @@ const ProductList = (props) => {
     )
 }
 export default ProductList;
+
