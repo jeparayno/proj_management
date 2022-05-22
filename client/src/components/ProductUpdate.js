@@ -53,9 +53,11 @@ const ProductUpdate = (props) => {
                     <br/>
                     <input type="text" name="description" value={description} onChange={(e) => { setDescription(e.target.value)} } />
                 </p>
-                <input type="submit" />
+                <button type="submit" class="btn btn-success">Update</button>
+                &nbsp;
+                <Link to={`/home`}><button type="button" class="btn btn-info">Back</button></Link>
             </form>
-            <Link to={`/home`}>Back to Home</Link>
+            
         </div>
     )
 }

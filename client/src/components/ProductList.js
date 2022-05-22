@@ -21,34 +21,27 @@ const ProductList = (props) => {
     
     return (
         <div>
-            {
-                product.map((product, index) => {
-                    return (
-                        <div key={index}>
-                            <table className='table' >
-                                <thead>
-                                    <tr>
-                                        <th scope='col'>Product</th>
-                                        <th scope='col'>Price</th>
-                                        <th scope='col'>Description</th>
-                                        <th scope='col'>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>{product.title}</td>
-                                        <td>{product.price}</td>
-                                        <td>{product.description}</td>
-                                        <td>
-                                            <Link to={`/details/${product._id}`}><button type="button" class="btn btn-info">Details</button></Link> &nbsp;     
-                                            <Link to={`/details/update/${product._id}`}><button type="button" class="btn btn-warning">Edit</button></Link></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    )
-                })
-            }
+            <table className='table'>
+                <thead>
+                    <tr>
+                        <th scope='col'>Product</th>
+                        <th scope='col'>Price</th>
+                        <th scope='col'>Description</th>
+                        <th scope='col'>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {product.map((product) => 
+                        <tr>
+                        <td>{product.title}</td>
+                        <td>{product.price}</td>
+                        <td>{product.description}</td>
+                        <td><Link to={`/details/${product._id}`}><button type="button" class="btn btn-info">Details</button></Link> &nbsp;     
+                            <Link to={`/details/update/${product._id}`}><button type="button" class="btn btn-warning">Edit</button></Link></td>
+                        </tr>
+                    )}
+                </tbody>
+            </table>
         </div>
     )
 }
