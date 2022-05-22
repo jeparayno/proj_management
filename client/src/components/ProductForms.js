@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import '../Assets/Style.css';
 
+
 const ProductForms = (props) => {
     const navigate = useNavigate();
     const {product, setProduct} = props;
@@ -30,7 +31,7 @@ const ProductForms = (props) => {
     }
     
     return (
-        <form onSubmit={onSubmitHandler} className="prodForm">
+        <form onSubmit={onSubmitHandler} className="prodForm" encType='multipart/form-data'>
             <div className='form-group mb-4 align-item-center'>
                 <label for="productTitle" className='prodTxt'> Product Name </label>
                 <input type="text" class="form-control mx-sm-3" onChange = {(e) => setTitle(e.target.value)} placeholder="Name" />
@@ -42,6 +43,10 @@ const ProductForms = (props) => {
             <div className='form-group mb-4 align-item-center'>
                 <label for="productDescription" className='prodTxt'> Product Description </label>
                 <textarea class="form-control mx-sm-3" onChange = {(e)=>setDescription(e.target.value)} placeholder="Description" />
+            </div>
+            <div className='form-group mb-4 align-item-center'>
+                <label for="image">Upload File </label>
+                <input type="file" name="image" id="image" class="form-control-file"></input>
             </div>
             <button type="submit" class="btn btn-success">Submit</button>
             &nbsp;

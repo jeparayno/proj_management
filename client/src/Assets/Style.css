@@ -21,10 +21,14 @@ form {
     margin-top: 5%;
 }
 
+.prodDetTxt {
+    width: 800px;
+}
+
 /* This is for the Product Update */
 
 .updateProd {
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .prodUpTxt {

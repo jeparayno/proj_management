@@ -38,22 +38,22 @@ const ProductUpdate = (props) => {
     return (
         <div className="updateProd">
             <h1>Update a Product</h1>
-            <form onSubmit={updateProduct}>
-                <p>
+            <form onSubmit={updateProduct} className="prodForm">
+                <div className='form-group mb-4 align-item-center'>
                     <label className="prodUpTxt">Title:</label>
                     <br/>
-                    <input type="text" name="title" value={title} onChange={(e) => { setTitle(e.target.value)} } />
-                </p>
-                <p>
+                    <input class="form-control mx-sm-3" type="text" name="title" value={title} onChange={(e) => { setTitle(e.target.value)} } />
+                </div>
+                <div className='form-group mb-4 align-item-center'>
                     <label className="prodUpTxt">Price:</label>
                     <br/>
-                    <input type="number" name="price" value={price} onChange={(e) => { setPrice(e.target.value)} } />
-                </p>
-                <p>
+                    <input class="form-control mx-sm-3" type="number" name="price" value={price} onChange={(e) => { setPrice(e.target.value)} } />
+                </div>
+                <div className='form-group mb-4 align-item-center'>
                     <label className="prodUpTxt">Description:</label>
                     <br/>
-                    <textarea name="description" value={description} onChange={(e) => { setDescription(e.target.value)} }  />
-                </p>
+                    <textarea class="form-control mx-sm-3" name="description" value={description} onChange={(e) => { setDescription(e.target.value)} }  />
+                </div>
                 <button type="submit" class="btn btn-success">Update</button>
                 &nbsp;
                 <Link to={`/home`}><button type="button" class="btn btn-info">Back</button></Link>

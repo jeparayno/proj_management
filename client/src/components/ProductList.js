@@ -35,7 +35,7 @@ const ProductList = (props) => {
                         <tr>
                         <td>{product.title}</td>
                         <td>{product.price}</td>
-                        <td>{product.description}</td>
+                        <td  className='prodDetTxt'>{product.description}</td>
                         <td><Link to={`/details/${product._id}`}><button type="button" class="btn btn-info">Details</button></Link> &nbsp;     
                             <Link to={`/details/update/${product._id}`}><button type="button" class="btn btn-warning">Edit</button></Link></td>
                         </tr>
