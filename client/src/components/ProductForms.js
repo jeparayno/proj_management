@@ -41,7 +41,7 @@ const ProductForms = (props) => {
             </div>
             <div className='form-group mb-4 align-item-center'>
                 <label for="productDescription" className='prodTxt'> Product Description </label>
-                <input type="text" class="form-control mx-sm-3" onChange = {(e)=>setDescription(e.target.value)} placeholder="Description" />
+                <textarea class="form-control mx-sm-3" onChange = {(e)=>setDescription(e.target.value)} placeholder="Description" />
             </div>
             <button type="submit" class="btn btn-success">Submit</button>
             &nbsp;

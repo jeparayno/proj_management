@@ -21,7 +21,7 @@ const ProductList = (props) => {
     
     return (
         <div>
-            <table className='table'>
+            <table className='table table-striped'>
                 <thead>
                     <tr>
                         <th scope='col'>Product</th>
