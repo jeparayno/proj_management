@@ -2,7 +2,7 @@ import React, { useEffect} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 const ProductList = (props) => {
-    const { product, setProduct} = props;
+    const { product, setProduct } = props;
     
     useEffect(()=>{
     	axios.get("http://localhost:8000/api/getAllProd")
@@ -31,7 +31,9 @@ const ProductList = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {product.map((product) => 
+                    {
+                    product &&
+                    product.map((product) => 
                         <tr>
                         <td>{product.title}</td>
                         <td>{product.price}</td>

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 import ProductList from '../components/ProductList';
 
-const Main = (props) => {
+const Main = () => {
     
     const [product, setProduct] = useState([]);
     

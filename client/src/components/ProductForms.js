@@ -38,7 +38,7 @@ const ProductForms = (props) => {
             </div>
             <div className='form-group mb-4 align-item-center'>
                 <label for="productPrice" className='prodTxt'> Product Price </label>
-                <input type="number" class="form-control mx-sm-3" onChange = {(e)=>setPrice(e.target.value)} placeholder="Price" />
+                <input type="number" class="form-control mx-sm-3" onChange = {(e)=>setPrice(e.target.valueAsNumber)} placeholder="Price" />
             </div>
             <div className='form-group mb-4 align-item-center'>
                 <label for="productDescription" className='prodTxt'> Product Description </label>
