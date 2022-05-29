@@ -10,15 +10,6 @@ const ProductList = (props) => {
     	.catch(err =>{console.log(err);})
     }, [])
 
-    // const deleteProduct = (idBelow) => {
-    //     axios.delete(`http://localhost:8000/api/deleteOneProd/${idBelow}` )
-    //         .then( (res) => { 
-    //             //console.log(res.data);
-    //             setProduct(product.filter((product, index)=>product._id !== idBelow)); 
-    //         })
-    //         .catch((err) => console.log(err));
-    // }
-    
     return (
         <div>
             <table className='table table-striped'>

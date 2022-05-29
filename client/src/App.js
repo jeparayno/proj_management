@@ -7,7 +7,7 @@ import ProductUpdate from './components/ProductUpdate';
 import CreateProduct from './components/CreateProduct';
 import Navbar from './components/Navbar';
 
-const App = () => {
+const App = (props) => {
     
     return(
 	<div className='App'>
